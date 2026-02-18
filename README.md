@@ -4,8 +4,9 @@ Alfinete is a hub for centralizing the creation and publication of external noti
 
 ## Features
 
-- [ ] Create notice
+- [x] Create notice
 - [ ] Generate a story-format notice
+- [ ] Write notices using AI
 
 ## Screenshots
 
@@ -20,6 +21,8 @@ _Coming soon_
 5. PostgreSQL
 6. Redis
 7. Cloudflare R2
+8. Tanstack Query
+9. AI SDK
 
 ## Contributing
 
