@@ -149,7 +149,7 @@ export function CreateNoticeDialog() {
                 <input
                   type="date"
                   className="w-full p-2 border border-zinc-200 focus:outline outline-purple-400 rounded-lg"
-                  {...register('startDate', { valueAsDate: true })}
+                  {...register('startDate')}
                 />
                 {errors.startDate && (
                   <p className="text-xs text-red-500">
@@ -165,7 +165,7 @@ export function CreateNoticeDialog() {
                 <input
                   type="date"
                   className="w-full p-2 border border-zinc-200 focus:outline outline-purple-400 rounded-lg"
-                  {...register('endDate', { valueAsDate: true })}
+                  {...register('endDate')}
                 />
                 {errors.endDate && (
                   <p className="text-xs text-red-500">

@@ -31,8 +31,8 @@ export const notices = pgTable('notices', {
   type: noticeTypeEnum('type').notNull(),
   status: noticeStatusEnum('status').notNull().default('DRAFT'),
   dismissible: boolean('dismissible').notNull().default(false),
-  startDate: timestamp('start_date').notNull(),
-  endDate: timestamp('end_date').notNull(),
+  startDate: timestamp('start_date', { withTimezone: true }).notNull(),
+  endDate: timestamp('end_date', { withTimezone: true }).notNull(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
 })

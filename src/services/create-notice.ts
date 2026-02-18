@@ -25,8 +25,8 @@ export async function createNotice(data: CreateNoticeFormSchema) {
       type: data.type,
       status: data.status,
       dismissible: data.dismissible,
-      startDate: data.startDate,
-      endDate: data.endDate,
+      startDate: new Date(data.startDate + 'T00:00:00-03:00'),
+      endDate: new Date(data.endDate + 'T23:59:59-03:00'),
     })
     .returning({ id: notices.id })
 
