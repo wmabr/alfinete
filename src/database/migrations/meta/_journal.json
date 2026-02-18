@@ -15,6 +15,20 @@
       "when": 1771368220496,
       "tag": "0001_classy_skin",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1771383336686,
+      "tag": "0002_rich_omega_sentinel",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1771419718154,
+      "tag": "0003_chilly_risque",
+      "breakpoints": true
     }
   ]
 }

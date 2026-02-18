@@ -1,6 +1,7 @@
 import { boolean, pgEnum, pgTable, text, timestamp } from 'drizzle-orm/pg-core'
 import { user } from './users'
 import { relations } from 'drizzle-orm'
+import { images } from './images'
 
 export const noticeTypeEnum = pgEnum('notice_type_enum', [
   'TOAST',
@@ -24,7 +25,9 @@ export const notices = pgTable('notices', {
     .notNull(),
   title: text('title').notNull(),
   content: text('content'),
-  imageUrl: text('image_url'),
+  imageId: text('image_id').references(() => images.id, {
+    onDelete: 'set null',
+  }),
   type: noticeTypeEnum('type').notNull(),
   status: noticeStatusEnum('status').notNull().default('DRAFT'),
   dismissible: boolean('dismissible').notNull().default(false),
@@ -38,5 +41,9 @@ export const noticesRelations = relations(notices, ({ one }) => ({
   users: one(user, {
     fields: [notices.authorId],
     references: [user.id],
+  }),
+  images: one(images, {
+    fields: [notices.imageId],
+    references: [images.id],
   }),
 }))

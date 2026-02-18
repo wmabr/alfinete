@@ -1,0 +1,1 @@
+ALTER TABLE "notices" ALTER COLUMN "dismissible" SET DEFAULT true;
