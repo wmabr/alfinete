@@ -1,4 +1,5 @@
 export * from './accounts'
+export * from './notices'
 export * from './sessions'
 export * from './users'
 export * from './verifications'
