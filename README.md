@@ -4,7 +4,7 @@ Alfinete is a hub for centralizing the creation and publication of external noti
 
 ## Features
 
-- [x] Create notice
+- [x] Manage notices
 - [ ] Generate a story-format notice
 - [ ] Write notices using AI
 
