@@ -3,10 +3,10 @@
 import { db } from '@/database'
 import { notices } from '@/database/schema'
 import { auth } from '@/lib/auth'
-import { CreateNoticeFormSchema } from '@/schemas/create-notice-form-schema'
+import { EditNoticeFormSchema } from '@/schemas/edit-notice-form-schema'
 import { headers } from 'next/headers'
 
-export async function createNotice(data: CreateNoticeFormSchema) {
+export async function createNotice(data: EditNoticeFormSchema) {
   const session = await auth.api.getSession({
     headers: await headers(),
   })
